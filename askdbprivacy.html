@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>隐私政策 - ASKdb</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.75;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    color: #1c1c1e;
+    background: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e5e5e7; background: #1c1c1e; }
+    a { color: #6ab0ff; }
+    code { background: #2c2c2e; }
+    .meta { color: #98989d; }
+  }
+  h1 { font-size: 1.9em; margin-bottom: 8px; }
+  h2 { font-size: 1.3em; margin-top: 2em; border-bottom: 1px solid rgba(128,128,128,.25); padding-bottom: 6px; }
+  h3 { font-size: 1.08em; margin-top: 1.4em; }
+  .meta { color: #6e6e73; font-size: .92em; margin-bottom: 2em; }
+  ul { padding-left: 1.4em; }
+  li { margin: 6px 0; }
+  code { background: #f2f2f7; padding: 2px 6px; border-radius: 4px; font-size: .9em; }
+  a { color: #0066cc; }
+  .highlight { font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>隐私政策</h1>
+<p class="meta">适用于：ASKdb（以下简称「本应用」）<br>
+开发者：ASKdb<br>
+最后更新日期：2026 年 6 月 12 日</p>
+
+<p>ASKdb（以下简称「我们」）非常重视您的隐私。本应用是一款在您本地设备上运行的数据库客户端工具，<span class="highlight">我们的核心原则是：本应用不收集、不上传、不留存您的任何个人数据或数据库内容到我们的服务器。</span>本隐私政策旨在向您清晰说明本应用如何处理信息。</p>
+
+<h2>一、我们不收集的信息</h2>
+<p>本应用<span class="highlight">没有</span>开发者运营的后端服务器。我们不会收集、存储或访问以下任何信息：</p>
+<ul>
+  <li>您的数据库连接信息（主机地址、端口、用户名、密码、库名）；</li>
+  <li>您的数据库中的任何数据内容；</li>
+  <li>您输入的查询内容、AI 对话记录、语音内容；</li>
+  <li>设备标识符、位置、通讯录或其他个人身份信息；</li>
+  <li>使用分析、崩溃统计或广告追踪数据。</li>
+</ul>
+
+<h2>二、信息在本地如何存储</h2>
+<p>为实现应用功能，以下信息<span class="highlight">仅保存在您的本地设备上</span>，由您完全掌控：</p>
+<ul>
+  <li><span class="highlight">数据库连接配置</span>（主机、端口、用户名、库名等）：保存在系统标准的偏好设置中；</li>
+  <li><span class="highlight">数据库密码与 AI 服务密钥</span>：通过 Apple 系统钥匙串（Keychain）<span class="highlight">加密存储</span>，绝不以明文形式落盘，也不会被本应用上传至任何地方；</li>
+  <li><span class="highlight">输入历史与界面偏好</span>：保存在本地，用于改善您的使用体验。</li>
+</ul>
+<p>卸载本应用即可清除上述本地数据（钥匙串项目可能需在系统设置中单独移除）。</p>
+
+<h2>三、关于 AI 功能的数据流向</h2>
+<p>本应用的智能问答与「自然语言转 SQL」功能，依赖于<span class="highlight">由您自行配置的第三方 AI 服务</span>（任意 OpenAI 兼容接口）。请您知悉：</p>
+<ul>
+  <li>本应用不内置、不代理任何云端 AI 服务；AI 服务地址（baseURL）、密钥（API Key）与模型均由您自行填写。</li>
+  <li>当您使用 AI 功能时，您的提问内容、相关的数据库结构（表名、字段名等上下文）会<span class="highlight">直接从您的设备发送至您所配置的那一个 AI 服务端</span>，<span class="highlight">不经过我们的任何服务器，我们也无法看到这些内容</span>。</li>
+  <li>该第三方 AI 服务如何处理您发送的数据，受<span class="highlight">该服务提供商自身的隐私政策与条款</span>约束。在向 AI 发送敏感数据前，请您自行评估并阅读该提供商的相关政策。</li>
+</ul>
+
+<h2>四、数据库的访问与执行</h2>
+<p>本应用直接连接您指定的数据库（MySQL、PostgreSQL、SQLite）并执行 SQL 语句。所有连接与查询均在您的设备与您的数据库之间直接进行。为降低风险，本应用提供：</p>
+<ul>
+  <li><span class="highlight">权限分级</span>：可在「仅查询」「查询 + 更新」「全部权限」之间选择，限制 AI 生成语句的操作范围；</li>
+  <li><span class="highlight">危险操作拦截</span>：对越权语句自动阻止，对 <code>DROP</code>、<code>TRUNCATE</code> 及缺少 <code>WHERE</code> 的全表删改等高风险语句强制二次确认。</li>
+</ul>
+<p>您对自身数据库的所有操作及其后果负责，请确保已对重要数据做好备份。</p>
+
+<h2>五、系统权限说明</h2>
+<p>本应用在沙盒（App Sandbox）中运行，仅申请实现功能所必需的权限：</p>
+<ul>
+  <li><span class="highlight">网络访问</span>：用于连接您的数据库及您配置的 AI 服务；</li>
+  <li><span class="highlight">麦克风</span>：仅在您主动使用语音输入功能时启用。语音通过 Apple 系统的语音识别框架转换为文字，相关处理遵循 Apple 的隐私规范，我们不留存任何录音或转写内容。</li>
+</ul>
+
+<h2>六、第三方服务</h2>
+<p>本应用本身不集成任何广告、分析或追踪类第三方 SDK。唯一涉及的外部交互是您主动配置的 AI 服务与数据库服务，二者均由您自行选择与掌控。</p>
+
+<h2>七、儿童隐私</h2>
+<p>本应用是面向开发者与专业人员的工具类软件，并非面向 13 周岁以下儿童设计，我们不会有意收集儿童的个人信息。</p>
+
+<h2>八、本政策的变更</h2>
+<p>我们可能会不时更新本隐私政策。任何变更将通过更新本页面及顶部的「最后更新日期」予以公布。建议您定期查阅。</p>
+
+<h2>九、联系我们</h2>
+<p>如您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：</p>
+<ul>
+  <li>电子邮件：<a href="mailto:c1020378873@gmail.com">c1020378873@gmail.com</a></li>
+</ul>
+
+<p class="meta" style="margin-top:3em;">© 2026 ASKdb. 保留所有权利。</p>
+
+</body>
+</html>

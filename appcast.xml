@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>qianplayer</title>
+        <item>
+            <title>1.1.3</title>
+            <pubDate>Mon, 15 Jun 2026 16:09:20 +0800</pubDate>
+            <sparkle:version>297</sparkle:version>
+            <sparkle:shortVersionString>1.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://qianplayer.github.io/qianplayer-v1.1.3-17-g6a70f4c-arm64.dmg" length="39802680" type="application/octet-stream" sparkle:edSignature="qyrKuyOblhI5gTY+TuH5hlXzFtxh34UeBFpGEK5Wtw5w+c8iCMDlsUpNINzILH7SSaEajq6+DnORwe4m2jidBw=="/>
+        </item>
+        <item>
+            <title>1.1.3</title>
+            <pubDate>Mon, 15 Jun 2026 15:48:25 +0800</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>1.1.3</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://qianplayer.github.io/qianplayer-v1.1.3-16-g4821b14-arm64.dmg" length="39802790" type="application/octet-stream" sparkle:edSignature="cBVnUbOgpkGmGIcg/s4ACMzJPL4rP7Px4GT8DCA0YdJsmAcVPG/YLM9n6GwUsA4NAHBvPzapCSOsTAxvoyeKCw=="/>
+        </item>
+    </channel>
+</rss>
